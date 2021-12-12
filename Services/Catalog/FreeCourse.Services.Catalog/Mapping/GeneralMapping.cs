@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Mapping
 {
-    internal class GeneralMapping : Profile
+    public class GeneralMapping : Profile
     {
         public GeneralMapping()
         {

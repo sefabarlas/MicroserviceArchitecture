@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Services
 {
-    internal class CategoryService : ICategoryService
+    public class CategoryService : ICategoryService
     {
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
@@ -39,7 +39,7 @@ namespace FreeCourse.Services.Catalog.Services
             return category == null ? Response<CategoryDto>.Fail("Category not found", StatusCodes.Status404NotFound) : Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), StatusCodes.Status200OK);
         }
 
-        public async Task<Response<CategoryDto>> CreateAsync(CategoryCreateDto category)
+        public async Task<Response<CategoryDto>> CreateAsync(CategoryDto category)
         {
             var mappedCategory = _mapper.Map<Category>(category);
             await _categoryCollection.InsertOneAsync(mappedCategory);
