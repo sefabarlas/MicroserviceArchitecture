@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Settings
 {
-    public class DatabaseSettings : IDatabaseSettings
+    internal class DatabaseSettings : IDatabaseSettings
     {
         public string CourseCollectionName { get; set; }
         public string CategoryCollectionName { get; set; }

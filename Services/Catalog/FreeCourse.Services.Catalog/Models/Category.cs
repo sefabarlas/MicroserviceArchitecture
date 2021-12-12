@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FreeCourse.Services.Catalog.Models
 {
-    public class Category
+    internal class Category
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Dtos
 {
-    internal class FeatureDto
+    public class CategoryCreateDto
     {
-        public int Duration { get; set; }
+        public string Name { get; set; }
     }
 }
