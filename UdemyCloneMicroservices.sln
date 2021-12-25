@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{45
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{453108F9-A0F2-470D-8551-BC23EC014521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Catalog", "Services\Catalog\FreeCourse.Services.Catalog\FreeCourse.Services.Catalog.csproj", "{8195881C-D360-4716-8A36-583213410CFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Services.Catalog", "Services\Catalog\FreeCourse.Services.Catalog\FreeCourse.Services.Catalog.csproj", "{8195881C-D360-4716-8A36-583213410CFA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B15A073-F722-4E29-9D61-964A443D45A6}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,7 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B84ED26D-86AB-4A39-BE6C-77E5899BBB86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Shared", "Shared\FreeCourse.Shared\FreeCourse.Shared.csproj", "{BF711FAB-72F5-4D8B-9585-743D56E56A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Shared", "Shared\FreeCourse.Shared\FreeCourse.Shared.csproj", "{BF711FAB-72F5-4D8B-9585-743D56E56A2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentitySerrver", "IdentitySerrver", "{21879DF7-3A6F-473D-A65A-9D652A44BF84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.IdentityServer", "IdentityServer\FreeCourse.IdentityServer\FreeCourse.IdentityServer.csproj", "{3D7234A4-F9EC-4964-93EF-ED8F321A0942}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,10 @@ Global
 		{BF711FAB-72F5-4D8B-9585-743D56E56A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF711FAB-72F5-4D8B-9585-743D56E56A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF711FAB-72F5-4D8B-9585-743D56E56A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D7234A4-F9EC-4964-93EF-ED8F321A0942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7234A4-F9EC-4964-93EF-ED8F321A0942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7234A4-F9EC-4964-93EF-ED8F321A0942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7234A4-F9EC-4964-93EF-ED8F321A0942}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,7 @@ Global
 		{453108F9-A0F2-470D-8551-BC23EC014521} = {45E7C472-8F5C-4D26-AE6F-5F84019269E7}
 		{8195881C-D360-4716-8A36-583213410CFA} = {453108F9-A0F2-470D-8551-BC23EC014521}
 		{BF711FAB-72F5-4D8B-9585-743D56E56A2F} = {B84ED26D-86AB-4A39-BE6C-77E5899BBB86}
+		{3D7234A4-F9EC-4964-93EF-ED8F321A0942} = {21879DF7-3A6F-473D-A65A-9D652A44BF84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6D00EE1-E149-4A47-A42C-C34111F5A705}
