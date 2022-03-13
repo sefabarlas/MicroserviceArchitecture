@@ -16,11 +16,13 @@ namespace FreeCourse.Web.Controllers
     {
         private readonly ICatalogService _catalogService;
         private readonly ISharedIdentityService _sharedIdentityService;
+        private readonly IPhotoStockService _photoStockService;
 
-        public CourseController(ICatalogService catalogService, ISharedIdentityService sharedIdentityService)
+        public CourseController(ICatalogService catalogService, ISharedIdentityService sharedIdentityService, IPhotoStockService photoStockService)
         {
             _catalogService = catalogService;
             _sharedIdentityService = sharedIdentityService;
+            _photoStockService = photoStockService;
         }
 
         public async Task<IActionResult> Index()
@@ -94,8 +96,14 @@ namespace FreeCourse.Web.Controllers
 
         public async Task<IActionResult> Delete(string id)
         {
-            await _catalogService.DeleteCourseAsync(id);
+            var course = await _catalogService.GetCourseByIdAsync(id);
+            if (course != null)
+            {
+                if (!string.IsNullOrEmpty(course.Picture))
+                    await _photoStockService.DeletePhoto(course.Picture);
+            }
 
+            await _catalogService.DeleteCourseAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }
