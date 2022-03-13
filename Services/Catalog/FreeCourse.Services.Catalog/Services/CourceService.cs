@@ -53,10 +53,14 @@ namespace FreeCourse.Services.Catalog.Services
                 {
                     course.Category = await _categoryCollection.Find<Category>(x => x.Id == course.CategoryId).FirstAsync();
                 }
-                return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(cources), StatusCodes.Status200OK);
+            }
+            else
+            {
+                cources = new List<Course>();
             }
 
-            return Response<List<CourseDto>>.Success(new List<CourseDto>(), StatusCodes.Status204NoContent);
+            return Response<List<CourseDto>>.Success(_mapper.Map<List<CourseDto>>(cources), StatusCodes.Status200OK);
+
         }
 
         public async Task<Response<CourseDto>> GetByIdAsync(string id)

@@ -29,6 +29,7 @@ namespace FreeCourse.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
+            services.AddAccessTokenManagement();
             services.AddHttpClient<IIdentityService, IdentityService>();
             services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
 
@@ -49,7 +50,6 @@ namespace FreeCourse.Web
             {
                 opt.BaseAddress = new Uri($"{serviceApiSettings.GatewayBaseUri}/{serviceApiSettings.Catalog.Path}");
             }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
-
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opts=> {
                 opts.LoginPath = "/Auth/SignIn";
