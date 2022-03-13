@@ -37,6 +37,11 @@
                         <textarea asp-for="Description" class="form-control"></textarea>
                         <span class="text-danger" asp-validation-for="Description"></span>
                     </div>
+                    <div class="mb-3">
+                        <label asp-for="PhotoFormFile" class="form-label"></label>
+                        <input type="file" asp-for="PhotoFormFile" class="form-control" />
+                        <span class="text-danger" asp-validation-for="PhotoFormFile"></span>
+                    </div>
                     <button type="submit" class="btn btn-primary">Kaydet</button>
                 </form>
             </div>
