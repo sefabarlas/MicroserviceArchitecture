@@ -79,7 +79,7 @@ namespace FreeCourse.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(string id, CourseUpdateInput courseUpdateInput)
+        public async Task<IActionResult> Update(CourseUpdateInput courseUpdateInput)
         {
             var categories = await _catalogService.GetAllCategoryAsync();
             ViewBag.categoryList = new SelectList(categories, "Id", "Name", courseUpdateInput.CategoryId);
@@ -88,6 +88,13 @@ namespace FreeCourse.Web.Controllers
                 return View();
 
             await _catalogService.UpdateCourseAsync(courseUpdateInput);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+            await _catalogService.DeleteCourseAsync(id);
 
             return RedirectToAction(nameof(Index));
         }
